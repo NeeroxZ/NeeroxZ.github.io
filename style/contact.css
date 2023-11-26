@@ -1,0 +1,36 @@
+#contact_section{
+    padding: 100px 0;
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    flex-wrap: wrap;
+
+}
+.contact_container{
+    width: 750px;
+    display: grid;
+    grid-template-columns:  repeat(2, 2fr);
+    align-items: center;
+    grid-gap: 6rem
+
+}
+.contact_contaier img {
+    float: left;
+    width:  100px;
+    height: 100px;
+    object-fit: cover;
+}
+.contact_contaier .linkedin img{
+    margin: 0 auto;
+    margin-top: 5%;
+    margin-left: 20%;
+}
+.contact_contaier .insta img{
+    margin: 0 auto;
+    margin-top: 5%;
+    margin-left: 20%;
+}
+
+

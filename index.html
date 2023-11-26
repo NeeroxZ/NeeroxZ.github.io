@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="./style/style.css" />
+    <link rel="stylesheet" href="./style/header.css" />
+    <link rel="stylesheet" href="./style/about_me.css" />
+    <link rel="stylesheet" href="./style/skills.css" />
+    <link rel="stylesheet" href="./style/road.css" />
+    <link rel="stylesheet" href="./style/contact.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header_text">
+        <nav>
+          <ul>
+            <li><a href="#about_me_section">About Me</a></li>
+            <li><a href="#skills_section">Experiences</a></li>
+            <li><a href="#road_section">CV</a></li>
+            <li><a href="#contact_section">Contact</a></li>
+          </ul>
+        </nav>
+        <h3>Hi, my name is</h3>
+        <h1>Nick Obreiter</h1>
+        <h3>and I'm a:</h3>
+        <h3>
+          <span id="job"></span>
+        </h3>
+
+        <p class="subheading">
+          "Measuring programming progress by lines of code is like measrung
+          aircraft building progress by weight <br />
+          ~Bill Gates"
+        </p>
+      </div>
+      <div class="circle">
+        <img src="./img/me.jpg" alt="Bild über mich" />
+      </div>
+    </header>
+
+    <!--Section about me-->
+    <section id="about_me_section">
+      <div data-aos="fade-right" data-aos-delay="80" data-aos-duration="2000">
+        <img src="img/me2.jpg" alt="" />
+      </div>
+
+      <div class="about_me_container">
+        <div data-aos="fade-down" data-aos-delay="150" data-aos-duration="1000">
+          <h1>About Me</h1>
+        </div>
+        <div data-aos="fade-up" data-aos-delay="550" data-aos-duration="1500">
+          <p>
+            My name is Nick, I'm 24 years old, and I completed my training as a
+            qualified IT specialist in 2022. During my training, I mainly worked
+            with Java and web development. Since I wanted to continue learning
+            and growing in the field, I started studying Applied Computer
+            Science in October 2022
+          </p>
+        </div>
+      </div>
+    </section>
+    <!--Section about skills-->
+    <section id="skills_section">
+      <div class="skills_container">
+        <h1>Experiences</h1>
+          
+      </div>
+    </section>
+    <!--Section about Curriculum vitae-->
+    <section id="road_section">
+      <div class="road_container">
+        <h1>Curriculum vitae</h1>
+        <ul class="list-component">
+          <div
+            data-aos="fade-left"
+            data-aos-delay="50"
+            data-aos-duration="1000"
+          >
+            <li class="__item">
+              <div class="card-component">
+                <h2 class="__year">09/2019 - 02/2022</h2>
+                <h1 class="__title">Training IT Specialist</h1>
+                <p class="__text">Rutronik GmbH</p>
+              </div>
+            </li>
+          </div>
+          <div
+            data-aos="fade-left"
+            data-aos-delay="50"
+            data-aos-duration="1000"
+          >
+            <li class="__item">
+              <div class="card-component">
+                <h2 class="__year">02/2022 - 09/2022</h2>
+                <h1 class="__title">Developer</h1>
+                <p class="__text">Rutronik GmbH</p>
+              </div>
+            </li>
+          </div>
+          <div
+            data-aos="fade-left"
+            data-aos-delay="50"
+            data-aos-duration="1000"
+          >
+            <li class="__item">
+              <div class="card-component">
+                <h2 class="__year">10/2022 - 2025</h2>
+                <h1 class="__title">Computer Science student</h1>
+                <p class="__text">Rutronik GmbH / DHBW-Karlsruhe</p>
+              </div>
+            </li>
+          </div>
+        </ul>
+      </div>
+    </section>
+
+    <!--Section about Contact-->
+    <section id="contact_section">
+      <div class="contact_contaier">
+        <div class="contact-form">
+          <h1>Contact <span>Me</span></h1>
+          <p>Connect with me via email: NeeroxZ@hotmail.de</p>
+          <div class="insta">
+            <img src="img/instagram.png" alt="" />
+          </div>
+          <div class="linkedin">
+            <img src="img/linkedin.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="js/typed.js"></script>
+    <script>
+      const typed = new Typed("#job", {
+        strings: ["Computer Science student.", "Trained IT specialist."],
+        typeSpeed: 50,
+        backSpeed: 50,
+        backDela: 1000,
+        loop: true,
+      });
+
+      AOS.init();
+
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth",
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
